@@ -6,5 +6,18 @@
   </head>
   <body>
     <h1>Hello word baby</h1>
+    <script type="text/javascript">
+      localStorage.user = {name: "John"};
+      console.log(localStorage.user); // [object Object]
+
+      // Using JSON.stringify as a workaround
+      localStorage.user = JSON.stringify({name: "John"});
+
+      let user = JSON.parse( localStorage.user );
+      console.log( user.name ); // John
+
+      // Printing the whole storage with added formatting options to make the object look nicer
+      console.log( JSON.stringify(localStorage, null, 2) );
+    </script>
   </body>
 </html>
