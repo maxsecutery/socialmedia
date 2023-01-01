@@ -1,3 +1,4 @@
 <?php
-echo "hello word!";
+$name = _GET('nm');
+echo " ".$name."";
  ?>
